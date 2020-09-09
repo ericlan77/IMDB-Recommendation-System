@@ -87,25 +87,33 @@ Genres:	Drama, Mystery, Romance	Year:	2015
 ```
 ### Step 4
 [read document](https://www.coursera.org/learn/java-programming-recommender/supplement/433EU/programming-exercise-step-four)
-**How to recommend movie for a rater-A?**:
-First, we compute the dot product of ratings of movies that rater-A and other raters both rated. Then we can get a list of raters has most similar taste as rater-A. Next, we dive into those chosen raters's movie ratings. What they like most may match the taste of rater-A. 
-MovieScore = &Sigma dotProduct * 
+**How to recommend movie for a rater-A?**: 
+First, we compute the dot product of ratings of movies that rater-A and other raters both rated. Then we can get a **list of chosen raters** has most similar taste as rater-A. Next, we dive into those **chosen raters**'s movie ratings. What they like most may match the taste of rater-A. compute **MovieScore = &Sigma;(dotProduct * the raters'rating) / numbers of raters**(raters &isin; **list of chosen raters**). Sort score we can get movies.
 
 **class revolved**：RaterDatabase, RaterDatabase, MovieRunnerSimilarRatings
 
 **RaterDatabase**: A HashMap named ourRaters that maps a rater ID String to a Rater object that includes all the movie ratings made by this rater.
 
-**MovieRunnerSimilarRatings**: 
-
 **Rating<otherId, dotProduct>**: otherRater's ID maps it's dot product of current rater.
 
 **FourthRatings**: in this class we have following methods:
+- numSimilarRaters: weighted average ratings using only the top numSimilarRaters with positive ratings 
+- minimalRaters: those movies should have at least minimalRaters ratings from those most similar raters
 - dotProduct(Rater me, Rater other): translate a rating from the scale 0 to 10 to the scale -5 to 5. Return the dot product of the ratings of movies that they both rated. The higher the score, the more similar two people are, and vice versa.
 - getSimilarities(String id): given a rater's id, call dotProduct to find the most similar raters. return a Rating list.
-- getSimilarRatings:
+- getSimilarRatings: Computing similar score of each movie, return list of highest score movies. 
+- getSimilarRatingsByFilter: add filters.
+
+We can get following output:
+```
+Recommended for user 337
+230.33333333333334 Frozen
+Recommended for user 964
+563.2222222222222 Gone Girl
+```
 
 ### Step 5
-[read document]()
-
+[read document](https://www.coursera.org/learn/java-programming-recommender/peer/uOSDs/step-five)
+follow the instruction to upload .class files and it will generate the page for you to choose movies and show the recommended movies.
 
 
