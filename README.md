@@ -89,7 +89,7 @@ Genres:	Drama, Mystery, Romance	Year:	2015
 [read document](https://www.coursera.org/learn/java-programming-recommender/supplement/433EU/programming-exercise-step-four)
 **How to recommend movie for a rater-A?**:
 First, we compute the dot product of ratings of movies that rater-A and other raters both rated. Then we can get a list of raters has most similar taste as rater-A. Next, we dive into those chosen raters's movie ratings. What they like most may match the taste of rater-A. 
-MovieScore = \Sigma dotProduct * 
+MovieScore = $\Sigma$ dotProduct * 
 
 **class revolved**：RaterDatabase, RaterDatabase, MovieRunnerSimilarRatings
 
