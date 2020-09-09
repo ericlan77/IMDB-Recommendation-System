@@ -106,7 +106,7 @@ MovieScore = $\Sigma$ dotProduct *
 
 
 
-
+$ \sum_{\forall i}{x_i^{2}} $
 ### Step 5
 [read document]()
 
