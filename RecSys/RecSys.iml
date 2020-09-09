@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/apache-csv.jar!/" />
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/courserajava.jar!/" />
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-core.jar!/" />
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-device.jar!/" />
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-gpio-extension.jar!/" />
+    <libelement value="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-service.jar!/" />
+    <src_description expected_position="1">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="1" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="apache-csv.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/apache-csv.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="courserajava.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/courserajava.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pi4j-core.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pi4j-device.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-device.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pi4j-gpio-extension.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-gpio-extension.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="pi4j-service.jar">
+        <CLASSES>
+          <root url="jar://D:/Tool Files/BlueJ/lib/userlib/pi4j-service.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>
