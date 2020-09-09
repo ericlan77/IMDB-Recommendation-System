@@ -11,21 +11,21 @@ After submitting your ratings, the system will offer you several movies(10 at mo
 the course contains 5 steps
 ### Step 1
 [read document](https://www.coursera.org/learn/java-programming-recommender/supplement/ILMcl/programming-exercise-step-one)
-class revolved: Movie, Rating, Rater, FirstRating
+**class revolved**: Movie, Rating, Rater, FirstRatings
 
-##class Movie##: basic information such as id, title, etc.
+**class Movie**: basic information such as id, title, etc.
 
-##class Rating##: item(id of movie), value;
+**class Rating**: item(id of movie), value;
 
-##Rater## keeps track of one rater and all their ratings:
+**Rater**: keeps track of one rater and all their ratings:
 - myID: a unique String ID for this rater
 - myRatings: an ArrayList of Ratings
 
-##Assignment##
+**Assignment**:
 there're 2 csv files, one contains all the movie information, other contains all the ratings of all the raters, after loading, we can get two import attributes:
 movieList, raterList. raterList consists of Rater.
 
-We can get some information:
+We can get following output:
 ```
 The num of movies is: 3143
 The num of COMEDY movies is: 960
@@ -38,9 +38,42 @@ The number of rated movie is: 3143
 Movie [id=3112654, title=Mea culpa, year=2014, genres= Action, Thriller]
 ```
 ### Step 2
-[read document]()
+[read document](https://www.coursera.org/learn/java-programming-recommender/supplement/KTrOQ/programming-exercise-step-two)
+
+**class revolved**: SecondRatings， MovieRunnerAverage
+
+In SecondRatings we get movieList, raterList by FirstRatings, compute the average rating value of a specific movie. 
+
+**Assignment**:
+create a MovieRunnerAverage, it has 2 method:
+1. **printAveragetRatings()**：given "minimalRaters", this method should find the average rating for every movie that has been rated by at least minimalRaters raters；
+2. **getAverageRatingOneMovie**: given the movie id, get the average rating of this movie.
+
+We can get following output:
+```
+Total movies: 3143 , total raters: 1048
+There are 3 movies with more than 60 raters
+7.616666666666666	Man of Steel
+8.376811594202898	The Wolf of Wall Street
+8.421875	Gravity
+rating of the Movie "Vacation" is 6.8
+```
+
 ### Step 3
-[read document]()
+[read document](https://www.coursera.org/learn/java-programming-recommender/supplement/E9Xy0/programming-exercise-step-three)
+**class revolved**：EfficientRater， MovieDatabase， Filter
+
+**Assiment1**:
+original Rater class use ArrayList<Ratings> to store all the ratings of one rater, if you want to know a rater's rating about the movie, you should traverse all the list, the time complexity is O(n). But if using hashmap, the complexity will be O(1) by calling hashmap.contains(key) or hashmap.get(key).
+so EfficientRater use HashMap<movieID, Ratings>, one movieID maps a Rating class.
+
+**Assignment2**:
+**MovieDatabase**: it stores movie information in a HashMap for fast lookup of movie information given a movie **ID**, also **allows filtering** movies based on queries. All methods and fields in the class are static. Once it's initialized,we'll be able to access methods in MovieDatabase without using new to create objects, but by calling methods like MovieDatabase.getMovie("0120915"), by movieID we can index a Movie object.
+
+**Filter** class: method of filters will returns true if the movie satisfies the criteria in the method and returns false otherwise. There're GeneFilter, YearFilter, etc. In AllFilters class we get a list of different filters, it return true only when this movie satisfies all the criteria.
+
+In **MovieDatabase** we call **ArrayList<String> filterBy(Filter f)** to get a list of movies satisfy all the criteria.
+
 ### Step 4
 [read document]()
 ### Step 5
