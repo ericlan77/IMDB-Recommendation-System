@@ -61,7 +61,7 @@ rating of the Movie "Vacation" is 6.8
 
 ### Step 3
 [read document](https://www.coursera.org/learn/java-programming-recommender/supplement/E9Xy0/programming-exercise-step-three)
-**class revolved**：EfficientRater， MovieDatabase， Filter
+**class revolved**：EfficientRater, MovieDatabase, Filter, ThirdRatings, MovieRunnerWithFilters
 
 **Assiment1**:
 original Rater class use ArrayList<Ratings> to store all the ratings of one rater, if you want to know a rater's rating about the movie, you should traverse all the list, the time complexity is O(n). But if using hashmap, the complexity will be O(1) by calling hashmap.contains(key) or hashmap.get(key).
@@ -70,12 +70,43 @@ so EfficientRater use HashMap<movieID, Ratings>, one movieID maps a Rating class
 **Assignment2**:
 **MovieDatabase**: it stores movie information in a HashMap for fast lookup of movie information given a movie **ID**, also **allows filtering** movies based on queries. All methods and fields in the class are static. Once it's initialized,we'll be able to access methods in MovieDatabase without using new to create objects, but by calling methods like MovieDatabase.getMovie("0120915"), by movieID we can index a Movie object.
 
-**Filter** class: method of filters will returns true if the movie satisfies the criteria in the method and returns false otherwise. There're GeneFilter, YearFilter, etc. In AllFilters class we get a list of different filters, it return true only when this movie satisfies all the criteria.
+**Filter** class: method of filters will returns true if the movie satisfies the criteria in the method and returns false otherwise. There're GeneFilter, YearFilter, etc. In **AllFilters** class we get a list of different filters, it return true only when this movie satisfies all the criteria.
 
 In **MovieDatabase** we call **ArrayList<String> filterBy(Filter f)** to get a list of movies satisfy all the criteria.
 
+ThirdRatings is similar to SecondRatings, only adding filters to filter before computing the average rating.
+create MovieRunnerWithFilters to output information.
+(Year after "2015", Genres contains "Romance")
+```
+find 5 movies
+4.75	Fifty Shades of Grey
+Genres:	Drama, Romance	Year:	2015
+6.0	Paper Towns
+Genres:	Drama, Mystery, Romance	Year:	2015
+...
+```
 ### Step 4
-[read document]()
+[read document](https://www.coursera.org/learn/java-programming-recommender/supplement/433EU/programming-exercise-step-four)
+**How to recommend movie for a rater-A?**:
+First, we compute the dot product of ratings of movies that rater-A and other raters both rated. Then we can get a list of raters has most similar taste as rater-A. Next, we dive into those chosen raters's movie ratings. What they like most may match the taste of rater-A. 
+MovieScore = \Sigma dotProduct * 
+
+**class revolved**：RaterDatabase, RaterDatabase, MovieRunnerSimilarRatings
+
+**RaterDatabase**: A HashMap named ourRaters that maps a rater ID String to a Rater object that includes all the movie ratings made by this rater.
+
+**MovieRunnerSimilarRatings**: 
+
+**Rating<otherId, dotProduct>**: otherRater's ID maps it's dot product of current rater.
+
+**FourthRatings**: in this class we have following methods:
+- dotProduct(Rater me, Rater other): translate a rating from the scale 0 to 10 to the scale -5 to 5. Return the dot product of the ratings of movies that they both rated. The higher the score, the more similar two people are, and vice versa.
+- getSimilarities(String id): given a rater's id, call dotProduct to find the most similar raters. return a Rating list.
+- getSimilarRatings:
+
+
+
+
 ### Step 5
 [read document]()
 
