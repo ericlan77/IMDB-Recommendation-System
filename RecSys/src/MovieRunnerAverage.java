@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class MovieRunnerAverage {
 	public void printAveragetRatings() {
-		int minimalRaters = 12; 
+		int minimalRaters = 60; 
 		SecondRatings secRatings = new SecondRatings("src/data/ratedmoviesfull.csv", "src/data/ratings.csv");
 		System.out.println("Total movies: "+secRatings.getMovieSize()+" , total raters: "+secRatings.getRaterSize());
 		

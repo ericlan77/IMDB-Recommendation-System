@@ -90,7 +90,7 @@ public class MovieRunnerWithFilter {
 	
 	public void printAverageRatingsByYearAfterAndGenre() {
 		int minimalRaters = 3;
-		int yearAfter = 1980;
+		int yearAfter = 2015;
 		String genres = "Romance";
 		ThirdRatings trdRatings = new ThirdRatings("src/data/ratings.csv");
 		MovieDatabase.initialize("ratedmoviesfull.csv");
@@ -140,7 +140,7 @@ public class MovieRunnerWithFilter {
 		//test.printAverageRatingsByGenre();
 		//test.printAverageRatingsByMinutes();
 		//test.printAverageRatingsByDirectors();
-		//test.printAverageRatingsByYearAfterAndGenre();
-		test.printAverageRatingsByDirectorsAndMinutes();
+		test.printAverageRatingsByYearAfterAndGenre();
+		//test.printAverageRatingsByDirectorsAndMinutes();
 	}
 }
