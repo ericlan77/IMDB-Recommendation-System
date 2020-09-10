@@ -124,7 +124,7 @@ The result will return to the Server and generate a new Rater with webRaterID.
 
 That's all !
 
-## What I have learnt:
+## Lessons:
 - you should care about every details about the objects, class, and figure out their relationships. In HashMap keys map list, and in list stores another map.
 many things will drive you crazy.
 - design every object/class in logic is every important, otherwise, make every object to be pure, comprehensive function 
