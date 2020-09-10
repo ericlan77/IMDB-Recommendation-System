@@ -114,6 +114,20 @@ Recommended for user 964
 
 ### Step 5
 [read document](https://www.coursera.org/learn/java-programming-recommender/peer/uOSDs/step-five)
-follow the instruction to upload .class files and it will generate the page for you to choose movies and show the recommended movies.
+follow the instruction to upload .class files and it will generate the page for you to choose movies and show the recommended movies, some details have been hiden
+on server.
 
+In RecommendationRunner, there are 2 main methods:
+**getItemsToRate ()**: generate a list of movie from MovieDatabase randomly. Movies will show on the pages for you to rate. 
+The result will return to the Server and generate a new Rater with webRaterID.
+**printRecommendationsFor(String webRaterID)**: given a webRaterID(it's you), print most recommend movies on pages(using HTML).
 
+That's all !
+
+## What I have learnt:
+- you should care about every details about the objects, class, and figure out their relationships. In HashMap keys map list, and in list stores another map.
+many things will drive you crazy.
+- design every object/class in logic is every important, otherwise, make every object to be pure, comprehensive function 
+and methods are hard for maintaining and fixing.
+- HashMap is faster than List, so in some circumstances, better using HashMap to search.
+- test new method immediately, unit test is important or you'll never know where's wrong.
