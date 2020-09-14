@@ -1,4 +1,4 @@
-# A simple movie recommendation system
+#IMDB movie recommendation system
 
 ## Overview
 It's the final project of [Java Programming: Build a Recommendation System](https://www.coursera.org/learn/java-programming-recommender/home/welcome) in Cousera.
